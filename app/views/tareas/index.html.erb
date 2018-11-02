@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <% @tareas.each_slice(3) do |row| %>
+            <% row.each do |tarea| %>
+                <div class="col">
+                    <div class="card">
+                        <%= image_tag tarea.foto, class: 'card-img-top' %> 
+                        <div class="body">   
+                            <h4> <%= tarea.nombre %> </h4>
+                            <%= link_to "Listo", tarea_user_tareas_path(tarea), class: 'btn btn-success', method: :post %>
+                        </div>    
+                        
+                    </div>    
+                </div>    
+            <% end %>
+            <div class="w-100" style="margin-top: 40px"> </div>
+        <% end %>    
+    </div>
+</div>
