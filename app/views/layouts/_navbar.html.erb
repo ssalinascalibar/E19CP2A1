@@ -10,7 +10,7 @@
         <a class="nav-link" href="<%= tareas_path %>">Lista de Tareas <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= user_tareas_path %>"> Mis Tareas </a>
+        <a class="nav-link" href="<%= user_tareas_path %>"> Mis Tareas Completadas <strong><%= current_user.user_tareas.count %>/9 </strong> </a>
       </li>
       
       

@@ -1,9 +1,21 @@
-<div class="card">
-<%= @tarea.nombre%>
-<%= @users.each do |user|%>
-<%= user.email%>
-<% end %>
-
-
-<%= image_tag @tarea.foto, class: 'card-img-top' %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <h4><%= @tarea.nombre %></h4>
+                </thead>    
+                    <% @users.each do |user|%>
+                    <td> Email usuario: <%= user.email%></td>
+                    <% end %>
+            </table>    
+        </div>    
+            
+        <div class="col-md-6">    
+                <%= image_tag @tarea.foto, class: 'card-img-top' %>
+        </div>    
+            
+            
+        </div>    
+    </div>    
 </div>
