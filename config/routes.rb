@@ -1,10 +1,19 @@
 Rails.application.routes.draw do
   get 'user_tareas/create'
-  resources :tareas, only: :index do
-    resources :user_tareas, only: :create #ruta rest
+  resources :tareas, only: :show do
+    resources :user_tareas, only: [:destroy]
 end
+
+  resources :tareas, only: :index do
+    
+    resources :user_tareas, only: :create #ruta rest
+    
+end
+
+
   
-resources :user_tareas, only: :index  
+resources :user_tareas, only: :index
+
 
   root to: 'tareas#index' #pag principal
   devise_for :users

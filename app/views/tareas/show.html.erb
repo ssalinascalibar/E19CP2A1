@@ -1,0 +1,9 @@
+<div class="card">
+<%= @tarea.nombre%>
+<%= @users.each do |user|%>
+<%= user.email%>
+<% end %>
+
+
+<%= image_tag @tarea.foto, class: 'card-img-top' %>
+</div>

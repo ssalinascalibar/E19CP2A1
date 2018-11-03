@@ -4,10 +4,21 @@
             <% row.each do |tarea| %>
                 <div class="col">
                     <div class="card">
-                        <%= image_tag tarea.foto, class: 'card-img-top' %> 
+                        <%= image_tag tarea.foto, class: 'card-img-top' %>
+                            
+
+                        
                         <div class="body">   
                             <h4> <%= tarea.nombre %> </h4>
+                            
+                            <%= link_to "NO listo", tarea_user_tarea_path(tarea, current_user), class: 'btn btn-danger', method: 
+                                :delete %>
+
                             <%= link_to "Listo", tarea_user_tareas_path(tarea), class: 'btn btn-success', method: :post %>
+
+                            <%= link_to "Ver detalle", tarea_path(tarea), class: 'btn btn-success', method: :GET %>
+
+
                         </div>    
                         
                     </div>    
