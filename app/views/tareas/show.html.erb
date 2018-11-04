@@ -13,6 +13,13 @@
                         <td> Fecha Creación: <%= user.created_at%></td>
                     </tr>
 
+
+
+                    <% end %>
+
+                    <% @tareas_realizadas.each do |tarea| %>
+                        <%= tarea.listo %>
+
                     <% end %>
             </table>    
         </div>    
