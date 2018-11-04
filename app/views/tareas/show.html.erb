@@ -6,7 +6,13 @@
                     <h4><%= @tarea.nombre %></h4>
                 </thead>    
                     <% @users.each do |user|%>
-                    <td> Email usuario: <%= user.email%></td>
+                    <tr>
+                        <td> Usuario: <%= user.email%></td>
+                    </tr>
+                    <tr>
+                        <td> Fecha Creación: <%= user.created_at%></td>
+                    </tr>
+
                     <% end %>
             </table>    
         </div>    

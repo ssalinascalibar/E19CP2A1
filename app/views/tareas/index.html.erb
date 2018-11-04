@@ -11,14 +11,17 @@
                         <div class="body">   
                             <h4> <%= tarea.nombre %> </h4>
                             
+                            <% if current_user %>
                             <%= link_to "NO listo", tarea_user_tarea_path(tarea, current_user), class: 'btn btn-danger', method: 
                                 :delete %>
+                                
 
                             <%= link_to "Listo", tarea_user_tareas_path(tarea), class: 'btn btn-success', method: :post %>
-
+                            <% end %>
+                           
                             <%= link_to "Ver detalle", tarea_path(tarea), class: 'btn btn-success', method: :GET %>
 
-                            
+
 
 
                         </div>    

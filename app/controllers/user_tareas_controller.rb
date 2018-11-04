@@ -12,7 +12,8 @@ class UserTareasController < ApplicationController
   end
 
   def index
-     @user_tareas = current_user.user_tareas 
+     @tarea = current_user.user_tareas
+
   end
 
   def destroy
