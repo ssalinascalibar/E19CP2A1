@@ -12,9 +12,11 @@ class UserTareasController < ApplicationController
   end
 
   def index
-     @tarea = current_user.user_tareas
+     @user_tareas = current_user.user_tareas
 
   end
+
+  
 
   def destroy
     @tarea = Tarea.find(params[:tarea_id])

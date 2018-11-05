@@ -7,7 +7,15 @@
                 </thead>    
                     <% @users.each do |user|%>
                     <tr>
-                        <td> Usuario: <%= user.email%></td>
+                        <td> Nombre: <%= user.first_name%></td>
+                    </tr>
+
+                    <tr>
+                        <td> Apellido: <%= user.last_name%></td>
+                    </tr>
+
+                    <tr>
+                        <td> Email Usuario: <%= user.email%></td>
                     </tr>
                     <tr>
                         <td> Fecha Creación: <%= user.created_at%></td>
@@ -17,10 +25,7 @@
 
                     <% end %>
 
-                    <% @tareas_realizadas.each do |tarea| %>
-                        <%= tarea.listo %>
-
-                    <% end %>
+                
             </table>    
         </div>    
             
